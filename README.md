@@ -60,6 +60,9 @@ git clone https://github.com/USERNAME/REPOSITORY
 
 Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
 
+## Usage
+
+For now, this game is going to be played completely from the console and is going to play against the computer.
 
 **Images**
 
