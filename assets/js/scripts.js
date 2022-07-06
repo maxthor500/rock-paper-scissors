@@ -31,6 +31,7 @@ const computerPlay = () => {
 }
 
 const playRound = (playerSelection, computerSelection) => {
+    const wonMessage = `You won! ${playerSelection} beats ${computerSelection}`
     const loseMessage = `You lose! ${computerSelection} beats ${playerSelection}`
     let winner = ""
 
