@@ -1,29 +1,29 @@
 const gameMoves = ["Rock", "Paper", "Scissors"]
 
-const playerPrompt = () => {
-    let player = prompt("Please, enter Rock, Paper or Scissors:")
+// const playerPrompt = () => {
+//     let player = prompt("Please, enter Rock, Paper or Scissors:")
 
-    if (player) {
-        player = player.toLowerCase()
-    }
+//     if (player) {
+//         player = player.toLowerCase()
+//     }
     
-    switch (player) {
-        case "rock":
-            player = "Rock"
-            break
-        case "paper":
-            player = "Paper"
-            break
-        case "scissors":
-            player = "Scissors"
-            break
-        default:
-            player = playerPrompt()
-            break
-    }
+//     switch (player) {
+//         case "rock":
+//             player = "Rock"
+//             break
+//         case "paper":
+//             player = "Paper"
+//             break
+//         case "scissors":
+//             player = "Scissors"
+//             break
+//         default:
+//             player = playerPrompt()
+//             break
+//     }
 
-    return player
-}
+//     return player
+// }
 
 const computerPlay = () => {
     const random = Math.floor(Math.random() * gameMoves.length)
@@ -59,7 +59,7 @@ const game = () => {
     const maxRounds = 5
 
     for (let i = 0; i < maxRounds; i++) {
-        const playerSelection = playerPrompt()
+        // const playerSelection = playerPrompt()
         const computerSelection = computerPlay()
         const round = playRound(playerSelection, computerSelection)
 
@@ -79,5 +79,6 @@ const game = () => {
     }
 }
 
-game()
+const startGame = document.getElementById("start-game");
 
+startGame.addEventListener("click", game());
