@@ -1,5 +1,5 @@
 <div align="center">
-    <img width=300px src="logo.svg" alt="Typography and colors">
+    <img width=300px src="./assets/images/logo.png" alt="Typography and colors">
 </div>
 <br>
 <div align="center">
@@ -89,6 +89,7 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
 - [Logo Maker](https://app.logo.com/)
 - [Figma](https://www.figma.com)
+- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 ## ✍️ Authors <a name = "authors"></a>
 
