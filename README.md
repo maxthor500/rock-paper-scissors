@@ -1,5 +1,5 @@
 <div align="center">
-    <img width=300px src="logo.svg" alt="Typography and colors">
+    <img width=300px src="./assets/images/logo.png" alt="Typography and colors">
 </div>
 <br>
 <div align="center">
@@ -28,6 +28,15 @@
 ## 🧐 About <a name = "about"></a>
 
 I made this game to practice Javascript following the requirements in the [Odin Project Lesson](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
+
+## Getting Started <a name = "getting_started"></a>
+
+Users should be able to:
+
+- View the optimal layout for the game depending on their device's screen size
+- Play Rock, Paper, Scissors against the computer
+- Maintain the state of the score after refreshing the browser _(optional)_
+- **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
@@ -62,7 +71,10 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 ## Usage
 
-For now, this game is going to be played completely from the console and is going to play against the computer.
+## Design
+
+- [Design wireframes PDF](./assets/wireframe/Rock_Paper_Scissors_Wireframe.pdf)
+
 
 **Images**
 
@@ -76,6 +88,8 @@ For now, this game is going to be played completely from the console and is goin
 - [GitHub](https://github.com/)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
 - [Logo Maker](https://app.logo.com/)
+- [Figma](https://www.figma.com)
+- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 ## ✍️ Authors <a name = "authors"></a>
 
@@ -84,3 +98,4 @@ For now, this game is going to be played completely from the console and is goin
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Inspiration: Odin Project
+- Starting from Design Figma by [@lamigenius](https://www.figma.com/@lamigenius)

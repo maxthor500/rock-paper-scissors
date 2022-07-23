@@ -49,30 +49,40 @@
             <span>SCISSORS</span>
         </h1>
     </div>
+    <div id="score-board">
+        <h3>Computer's Score</h3>
+        <div id="computer-score" class="points">0</div>
+        <h3>Your Score</h3>
+        <div id="player-score" class="points">0</div>
+    </div>
     <div class="container-game">
-        <figure id="rock">
+        <figure id="rock" class="hover" onclick="playerChoice(event)">
             <img src="./assets/images/real-rock.png" alt="rules">
             <figcaption class="d-none">Rock</figcaption>
         </figure>
-        <figure id="paper">
+        <figure id="paper" class="hover" onclick="playerChoice(event)">
             <img src="./assets/images/real-paper.png" alt="rules">
             <figcaption class="d-none">Paper</figcaption>
         </figure>
-        <div id="start" class="container">
-            <a id="start-game" class="btn" href="./game.html">Start Game</a>
+        <div id="result" class="container">
+            <p id="result-round"></p>
         </div>
-        <figure id="scissors">
+        <figure id="scissors" class="hover" onclick="playerChoice(event)">
             <img src="./assets/images/real-scissors.png" alt="rules">
             <figcaption class="d-none">Scissors</figcaption>
         </figure>
     </div>
 
-    <footer><small>Copyright © maxthor500 2022</small></footer>
+    <footer><small>Copyright © maxthor500 2022</span></footer>
 
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
         crossorigin="anonymous"
+    ></script>
+    <script 
+        src="./assets/js/scripts.js" 
+        type="application/javascript"
     ></script>
 </body>
 </html>

@@ -1,12 +1,9 @@
 const gameMoves = ["Rock", "Paper", "Scissors"]
 
-const playerPrompt = () => {
-    let player = prompt("Please, enter Rock, Paper or Scissors:")
 
-    if (player) {
-        player = player.toLowerCase()
-    }
-    
+const playerChoice = (e) => {
+    let player = e.target.parentNode.id
+
     switch (player) {
         case "rock":
             player = "Rock"
@@ -17,13 +14,11 @@ const playerPrompt = () => {
         case "scissors":
             player = "Scissors"
             break
-        default:
-            player = playerPrompt()
-            break
     }
-
-    return player
+    
+    game(player)
 }
+
 
 const computerPlay = () => {
     const random = Math.floor(Math.random() * gameMoves.length)
@@ -31,53 +26,49 @@ const computerPlay = () => {
 }
 
 const playRound = (playerSelection, computerSelection) => {
+    const resultRound = document.getElementById("result-round")
     const wonMessage = `You won! ${playerSelection} beats ${computerSelection}`
     const loseMessage = `You lose! ${computerSelection} beats ${playerSelection}`
     let winner = ""
 
     if (playerSelection === computerSelection) {
-        console.log(`Draw! You selected ${playerSelection} as the computer did.`)
+        resultRound.textContent = (`Draw! You selected ${playerSelection} as the computer did.`)
     } else if (
         ((playerSelection === "Rock") && (computerSelection === "Paper")) ||
         ((playerSelection === "Paper") && (computerSelection === "Scissors")) ||
         ((playerSelection === "Scissors") && (computerSelection === "Rock"))
         ) {
-        console.log(loseMessage)
+        resultRound.textContent = (loseMessage)
         return winner = "Computer"
     } else {
-        console.log(wonMessage)
+        resultRound.textContent = (wonMessage)
         return winner = "Player"
     }
 }
 
-const game = () => {
-    let winnerRounds = {
-        player: 0,
-        computer: 0
-    }
-
-    const maxRounds = 5
-
-    for (let i = 0; i < maxRounds; i++) {
-        const playerSelection = playerPrompt()
-        const computerSelection = computerPlay()
-        const round = playRound(playerSelection, computerSelection)
-
-        if (round === "Player") {
-            winnerRounds.player += 1
-        } else if (round === "Computer"){
-            winnerRounds.computer += 1
-        } else {
-            i--
-        }
-    }
-
-    if (winnerRounds.player > winnerRounds.computer) {
-        console.log(`You got ${winnerRounds.player} points and won the game!`)
-    } else {
-        console.log(`${winnerRounds.player} points are not enough. You lose the game!`)
-    }
+let winnerRounds = {
+    player: 0,
+    computer: 0
 }
 
-game()
+const game = (player) => {
 
+    const computerSelection = computerPlay()
+    const round = playRound(player, computerSelection)
+
+    if (round === "Player") {
+        winnerRounds.player += 1
+    } else if (round === "Computer"){
+        winnerRounds.computer += 1
+    }
+
+    updateScore(winnerRounds)
+}
+
+const updateScore = (winnerRounds) => {
+    const playerScore = document.getElementById("player-score")
+    const computerScore = document.getElementById("computer-score")
+
+    playerScore.textContent = winnerRounds.player
+    computerScore.textContent = winnerRounds.computer
+}
