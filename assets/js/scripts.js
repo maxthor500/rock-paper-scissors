@@ -26,21 +26,22 @@ const computerPlay = () => {
 }
 
 const playRound = (playerSelection, computerSelection) => {
+    const resultRound = document.getElementById("result-round")
     const wonMessage = `You won! ${playerSelection} beats ${computerSelection}`
     const loseMessage = `You lose! ${computerSelection} beats ${playerSelection}`
     let winner = ""
 
     if (playerSelection === computerSelection) {
-        console.log(`Draw! You selected ${playerSelection} as the computer did.`)
+        resultRound.textContent = (`Draw! You selected ${playerSelection} as the computer did.`)
     } else if (
         ((playerSelection === "Rock") && (computerSelection === "Paper")) ||
         ((playerSelection === "Paper") && (computerSelection === "Scissors")) ||
         ((playerSelection === "Scissors") && (computerSelection === "Rock"))
         ) {
-        console.log(loseMessage)
+        resultRound.textContent = (loseMessage)
         return winner = "Computer"
     } else {
-        console.log(wonMessage)
+        resultRound.textContent = (wonMessage)
         return winner = "Player"
     }
 }
