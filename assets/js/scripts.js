@@ -1,6 +1,7 @@
 const gameMoves = ["Rock", "Paper", "Scissors"]
 
 // const playerPrompt = () => {
+
 //     let player = prompt("Please, enter Rock, Paper or Scissors:")
 
 //     if (player) {
@@ -24,6 +25,8 @@ const gameMoves = ["Rock", "Paper", "Scissors"]
 
 //     return player
 // }
+
+
 
 const computerPlay = () => {
     const random = Math.floor(Math.random() * gameMoves.length)

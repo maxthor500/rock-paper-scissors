@@ -13,10 +13,15 @@ body {
 }
 
 .navbar-toggler {
-    position: absolute;
-    right: 1rem;
+    /* position: absolute; */
+    right: .5rem;
+    top: 1rem;
     border: 2px solid #C34DBF;
     color: #C34DBF;
+}
+
+.navbar-collapse {
+    display: grid;
 }
 
 .nav-item {
@@ -66,8 +71,12 @@ h1 > :nth-child(4) {
 .container-game {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 14rem 5rem 18rem;
+    /* grid-template-rows: 14rem 5rem 18rem; */
     text-align: center;
+}
+
+figure > img {
+    width: 8rem;
 }
 
 #rock {
@@ -93,6 +102,7 @@ h1 > :nth-child(4) {
 #start-game {
     height: 4rem;
     font-weight: bold;
+    text-transform: uppercase;
     border: 1px solid #C3B7B7;
 }
 
@@ -107,9 +117,9 @@ h1 > :nth-child(4) {
     grid-row: 3;
 }
 
-#rock > img:hover, 
-#paper > img:hover, 
-#scissors > img:hover {
+#rock.hover > img:hover, 
+#paper.hover > img:hover, 
+#scissors.hover > img:hover {
     border-radius: 50%;
     border: 1rem solid #C34DBF;
 }
