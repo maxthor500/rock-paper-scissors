@@ -123,3 +123,14 @@ figure > img {
     border-radius: 50%;
     border: 1rem solid #C34DBF;
 }
+
+footer {
+    padding: .5rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #C34DBF;
+    text-align: center;
+    color: #FFFFFF;
+}
+
