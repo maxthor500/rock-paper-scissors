@@ -15,8 +15,8 @@ const playerChoice = (e) => {
             player = "Scissors"
             break
     }
-
-    return player
+    
+    game(player)
 }
 
 
@@ -45,35 +45,29 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
-const game = () => {
-    let winnerRounds = {
-        player: 0,
-        computer: 0
-    }
-
-    const maxRounds = 5
-
-    for (let i = 0; i < maxRounds; i++) {
-        const playerSelection = playerChoice()
-        const computerSelection = computerPlay()
-        const round = playRound(playerSelection, computerSelection)
-
-        if (round === "Player") {
-            winnerRounds.player += 1
-        } else if (round === "Computer"){
-            winnerRounds.computer += 1
-        } else {
-            i--
-        }
-    }
-
-    if (winnerRounds.player > winnerRounds.computer) {
-        console.log(`You got ${winnerRounds.player} points and won the game!`)
-    } else {
-        console.log(`${winnerRounds.player} points are not enough. You lose the game!`)
-    }
+let winnerRounds = {
+    player: 0,
+    computer: 0
 }
 
-const startGame = document.getElementById("start-game");
+const game = (player) => {
 
-startGame.addEventListener("click", game());
+    const computerSelection = computerPlay()
+    const round = playRound(player, computerSelection)
+
+    if (round === "Player") {
+        winnerRounds.player += 1
+    } else if (round === "Computer"){
+        winnerRounds.computer += 1
+    }
+
+    updateScore(winnerRounds)
+}
+
+const updateScore = (winnerRounds) => {
+    const playerScore = document.getElementById("player-score")
+    const computerScore = document.getElementById("computer-score")
+
+    playerScore.textContent = winnerRounds.player
+    computerScore.textContent = winnerRounds.computer
+}
